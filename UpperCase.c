@@ -8,10 +8,11 @@
  * turns the given String into upper-case characters
 */
 void toUpperCase(char* text){
-    while (*text =! '\0'){
-        if((text >= 'a')&&(text<='z')){
+    while (*text != '\0') {
+        if(*text >= 'a' && *text <= 'z') {      //removed additional brackets
             *text = *text -32;
         }
+        // Hier könnte Ihre Werbung stehen!
         text++;
     }
 }
@@ -28,6 +29,7 @@ int main(int argc, char const *argv[]) {
 
   test("xyz");
   test("this is a test");
+  test("12356!!!!???"); 
   
   return 0;
 }
